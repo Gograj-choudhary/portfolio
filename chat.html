@@ -1,0 +1,79 @@
+<!--creating a chat section -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Chat </title>
+    <style>
+        /* Chat Section */
+        .chat {
+            background: #1a1a1a; /* Dark background for contrast */
+            padding: 70px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .chat .content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #2a2a2a; /* Slightly lighter background for the form container */
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+        }
+        .chat .title span {
+            font-size: 40px;
+            display: inline;
+        }
+        .chat .form-items {
+            display: flex;
+            margin: 80px ;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .chat .form-items label {
+            text-align: left;
+            color: white;
+            font-size: 20px;
+        }
+        .chat .form-items input {
+            padding-top: 10px;
+        }
+        .chat button {
+            margin-top: 50px;
+            padding: 20px 50px;
+            border-radius: 30px;
+            
+        }
+        .chat button:hover{
+        color: white;
+        background-color: #b74b4b;
+        }
+
+
+    </style>
+</head>
+<body>
+    <section class="chat" id="chat">
+        <div class="content" id="content">
+            <div class="title">
+                <span> Contect Us </span>
+            </div>
+            <div class="form-items">
+                <label class="name"> Name </label>
+                <input type="text" placeholder="Enter your name" />
+                <label class="email"> Email </label>
+                <input type="email" placeholder="Enter your Email" />
+                <label class="phone"> Phone Number </label>
+                <input type="tel" placeholder="Enter your Phone Number" />
+                <label class="query"> Query </label>
+                <textarea placeholder="Enter your query"></textarea>
+            </div>
+            <button> Send Message</button> 
+        </div>
+        
+    </section>  
+    
+</body>
+</html>

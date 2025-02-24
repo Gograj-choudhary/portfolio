@@ -16,6 +16,23 @@ body{
     overflow-x: hidden;
 }
 
+/* Navbar CSS */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: black;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Add margin to body content to avoid overlap */
+body > *:not(nav) {
+    margin-top: 100px; /* Adjust based on the navbar height */
+}
+
 /* Custom scroll Bar Css */
 ::-webkit-scrollbar{
     width: 10px;
@@ -33,6 +50,8 @@ body{
 ::-webkit-scrollbar-thumb:hover{
     background: #b74b4b;
 }
+
+
 
 /*  navbar styling */
 nav{
@@ -355,12 +374,13 @@ section .main-container{
     margin: 40px 0;
     display: flex;
     justify-content: center;
+    text-align: center;
 
  }
 
  section .button button{
     outline: none;
-    padding: 8px 8px;
+    padding: 2px 8px;
     border-radius: 4px;
     font-size: 25px;
     font-weight: 400;
@@ -369,6 +389,7 @@ section .main-container{
     border: 2px solid transparent;
     cursor: pointer;
     transition: all 0.4s ease;
+    
 }
 
 section .button button:hover{
@@ -378,73 +399,82 @@ section .button button:hover{
 
 }
 
-.skills{
+.skills {
     background: black;
 }
 
-.skills .content{
+.skills .content {
     padding: 40px 0;
 }
 
-.skills .skills-details{
+.skills .skills-details {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-
+    align-items: flex-start;
 }
 
-.skills-details .text{
+.skills-details .text {
     width: 50%;
 }
 
-.skills-details p{
+.skills-details p {
     color: white;
     text-align: justify;
 }
 
-
-.skills .skills-details .experience{
+.skills .skills-details .experience {
     display: flex;
     align-items: center;
     margin: 0 10px;
-
 }
 
-.skills-details .experience .num{
+.skills-details .experience .num {
     color: white;
     font-size: 80px;
 }
 
-.skills-details .experience .exp{
+.skills-details .experience .exp {
     color: white;
     margin-left: 20px;
     font-size: 18px;
     font-weight: 500;
     margin: 0 6px;
-
 }
 
-.skills-details .boxes{
+.skills-details .skills {
     width: 45%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skills-details .skill {
+    background: #1e1e1e;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.skills-details .box{
-    width: calc(100%/2 - 20px);
-    margin: 20px 0;
+.skills-details .skill:hover {
+    transform: scale(1.05);
 }
 
-.skills-details .boxes .topic{
-    font-size: 20px;
-    color: #b74b4b;
+.skills-details .skill img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
 }
 
-.skills-details .boxes .per{
-    font-size: 60px;
-    color: #b74b4b;
+.skills-details .skill span {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
 }
+
 
 
 
@@ -641,6 +671,40 @@ section .button button:hover{
     text-align: center;
     margin: auto;
 }
+.contact .button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact .button a {
+    text-decoration: none;
+}
+
+.contact .button button {
+    display: inline-block;
+    width: auto; 
+    min-width: 120px; 
+    padding: 5px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #b74b4b;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.contact .button button:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 0 10px #b74b4b;
+}
+
+
+
 
 
 footer{
@@ -797,5 +861,4 @@ footer .text span a:hover{
     }
 }
 
- 
 
